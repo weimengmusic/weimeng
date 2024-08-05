@@ -7,36 +7,50 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <h2>導航欄</h2>
+    <header>
+        <div class="container">
+            <h1>歡迎來到崴孟網站</h1>
             <nav>
                 <ul>
                     <li><a href="#home">首頁</a></li>
                     <li><a href="#about">關於我們</a></li>
-                    <li><a href="#services">服務</a></li>
                     <li><a href="#contact">聯絡我們</a></li>
                 </ul>
             </nav>
-        </aside>
-        <main class="main-content">
-            <section id="home">
-                <h1>歡迎來到崴孟網站</h1>
-                <p>這是首頁內容。</p>
-            </section>
-            <section id="about">
-                <h2>關於我們</h2>
-                <p>這裡是關於我們的介紹。</p>
-            </section>
-            <section id="services">
-                <h2>服務</h2>
-                <p>這裡是我們提供的服務介紹。</p>
-            </section>
-            <section id="contact">
-                <h2>聯絡我們</h2>
-                <p>這裡是聯絡我們的資訊。</p>
-            </section>
-        </main>
-    </div>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>探索精彩內容</h2>
+            <p>在這裡，你可以找到最新的資訊和有趣的文章。</p>
+            <a href="#about" class="btn">了解更多</a>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>關於我們</h2>
+            <p>我們是一個致力於提供高質量內容的團隊。我們的目標是讓每一位訪客都能從中獲得價值。</p>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>聯絡我們</h2>
+            <p>有任何問題或建議，請隨時聯絡我們。</p>
+            <form>
+                <label for="name">姓名：</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">電子郵件：</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">訊息：</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn">發送</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 崴孟網站。保留所有權利。</p>
+        </div>
+    </footer>
 </body>
 </html>
