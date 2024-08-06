@@ -88,3 +88,12 @@ document.querySelectorAll('nav a').forEach(anchor => {
         }
     });
 });
+
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar.style.left === '-200px' || sidebar.style.left === '') {
+        sidebar.style.left = '0';
+    } else {
+        sidebar.style.left = '-200px';
+    }
+}
