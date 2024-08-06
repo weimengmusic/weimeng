@@ -1,12 +1,4 @@
-// 平滑滾動效果
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+
 
 // 滾動到頂部按鈕
 const scrollToTopBtn = document.getElementById('scrollToTop');
@@ -87,9 +79,12 @@ menuToggle.addEventListener('click', () => {
 // 平滑滾動效果
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        // 只對錨點鏈接進行平滑滾動，其他鏈接保持默認行為
+        if (this.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
 });
