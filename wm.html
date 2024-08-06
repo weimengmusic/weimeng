@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weibert & Meng 音樂創作網站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="1.jpg" alt="Weibert & Meng Logo">
+        <h1>Weibert & Meng 音樂創作網站</h1>
+    </header>
+    <nav>
+        <a href="#home">首頁</a>
+        <a href="#videos">影片</a>
+        <a href="#services">服務</a>
+        <a href="#contact">聯絡我們</a>
+        <a href="#about">關於我們</a>
+    </nav>
+    <!-- 幻燈片容器 -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="1.jpg" alt="照片1">
+        </div>
+        <div class="slide fade">
+            <img src="2.jpg" alt="照片2">
+        </div>
+        <div class="slide fade">
+            <img src="3.jpg" alt="照片3">
+        </div>
+        <!-- 可以添加更多的幻燈片 -->
+    </div>
+    <div id="home" class="container home-intro">
+        <h2>歡迎來到我們的網站！</h2>
+        <p>在這裡你可以了解我們的音樂創作和自媒體服務。我們期待與你分享我們的作品，並提供專業的服務。</p>
+
+    </div>
+    <div id="videos" class="container video-list">
+        <h2>影片</h2>
+        
+        <iframe src="https://www.youtube.com/embed/3OaOz34pCE0?start=14" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div id="services" class="container service-list">
+        <h2>我們的服務</h2>
+        <p>我們提供以下自媒體服務：</p>
+        <ul>
+            <li>音樂祝福錄製：為你或你的朋友錄製特別的音樂祝福。</li>
+            <li>音樂創作合作：與我們合作創作專屬於你的音樂。</li>
+            <li>音樂影片定制：製作專屬的音樂影片以供分享和紀念。</li>
+        </ul>
+    </div>
+    <div id="contact" class="container contact-form">
+        <h2>聯絡我們</h2>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="你的名字" required>
+            <input type="email" name="email" placeholder="你的電子郵件" required>
+            <textarea name="message" placeholder="你的留言" rows="5" required></textarea>
+            <button type="submit">發送</button>
+        </form>
+    </div>
+    <div id="about" class="container about-section">
+        <h2>關於我們</h2>
+        <p>我們是 Weibert 和 Meng，一對熱愛音樂的情侶。我們創作音樂影片並提供自媒體服務。了解我們更多，並探索我們的作品。</p>
+    </div>
+    <footer>
+        <p>跟我們聯繫：
+        <a href="https://www.youtube.com/@WeibertMeng" target="_blank">YouTube</a></p>
+    </footer>
+    <button class="scroll-to-top" id="scrollToTop">&#8679;</button>
+    <script src="scripts.js"></script>
+</body>
+</html>

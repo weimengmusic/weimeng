@@ -1,116 +1,234 @@
-/* 重設一些基本樣式 */
-body, h1, h2, p, ul, li, form, input, textarea {
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    color: #333;
+    background: #fef5f5;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
 header {
-    background: #333;
+    background: #ff99c8;
     color: #fff;
-    padding: 1rem 0;
-}
-
-header .container {
-    width: 80%;
-    margin: 0 auto;
+    padding: 20px 40px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    flex-wrap: wrap;
 }
-
+header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
 header h1 {
-    font-size: 2rem;
+    margin: 0;
+    font-size: 2.5em;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-
-nav ul {
-    list-style: none;
+header h1:hover {
+    transform: scale(1.1);
+    color: #fffed3;
+}
+nav {
     display: flex;
+    justify-content: center;
+    background: #fff;
+    padding: 15px 0;
+    border-bottom: 2px solid #f7a8b8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
 }
-
-nav ul li {
-    margin-left: 1rem;
-}
-
-nav ul li a {
-    color: #fff;
+nav a {
+    margin: 0 15px;
     text-decoration: none;
+    color: #f07b9c;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
-
-.hero {
-    background: #f4f4f4;
-    padding: 2rem 0;
-    text-align: center;
+nav a:hover {
+    color: #d64f6f;
+    transform: scale(1.1);
 }
-
-.hero h2 {
-    font-size: 2rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-.btn {
-    display: inline-block;
-    background: #007bff;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-}
-
-.about, .contact {
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.about h2, .contact h2 {
-    font-size: 1.8rem;
-}
-
-.contact form {
-    max-width: 600px;
+.container {
+    padding: 20px;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: left;
 }
-
-.contact form label {
-    display: block;
-    margin: 0.5rem 0;
-}
-
-.contact form input, .contact form textarea {
+.video-list iframe {
     width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
+    height: 315px;
+    margin-bottom: 20px;
+}
+.service-list, .contact-form, .about-section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.service-list:hover, .contact-form:hover, .about-section:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+.service-list ul {
+    list-style: none;
+    padding: 0;
+}
+.service-list li {
+    margin-bottom: 10px;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #f7a8b8;
     border-radius: 5px;
 }
-
-.contact form button {
-    display: inline-block;
-    background: #28a745;
-    color: #fff;
-    padding: 0.5rem 1rem;
+.contact-form button {
+    background-color: #f07b9c;
+    color: white;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
-
+.contact-form button:hover {
+    background-color: #d64f6f;
+}
 footer {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    background: #fff;
+    color: #333;
     text-align: center;
+    padding: 20px;
+    border-top: 2px solid #f7a8b8;
+}
+footer a {
+    color: #f07b9c;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f07b9c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    transition: background-color 0.3s;
+}
+.scroll-to-top:hover {
+    background-color: #d64f6f;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        margin: 10px 0;
+        font-size: 1em;
+    }
+    .video-list iframe {
+        height: 200px;
+    }
+    header {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    header img {
+        margin-bottom: 10px;
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+}
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    nav a {
+        font-size: 0.9em;
+    }
+}
+.home-intro {
+    background: linear-gradient(135deg, rgba(255, 192, 203, 0.8), rgba(255, 228, 225, 0.8));
+    padding: 50px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+}
+.home-intro h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #f07b9c;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    animation: textPulse 1.5s ease infinite;
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+@keyframes textPulse {
+    0% { text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); }
+    50% { text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4); }
+    100% { text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); }
+}
+.slideshow-container {
+    position: relative;
+    max-width: 60%; /* 或根據需求調整 */
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ddd; /* 幻燈片容器邊框 */
+    border-radius: 10px; /* 圓角效果 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 輕微的陰影效果 */
+    background-color: #f0f0f0; /* 背景顏色 */
 }
 
-footer p {
-    font-size: 0.9rem;
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.slide img {
+    width: 100%; /* 適應幻燈片容器寬度 */
+    height: auto; /* 保持圖片比例 */
+    max-height: 500px; /* 最大高度 */
+    object-fit: cover; /* 適應容器大小並保持比例 */
+}
+
+.fade {
+    animation: fade 5s ease-in-out infinite; /* 設置更慢的動畫速度 */
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
 }
