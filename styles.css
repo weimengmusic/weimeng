@@ -27,11 +27,20 @@ header h1 {
     font-size: 2.5em;
     transition: transform 0.3s ease, color 0.3s ease;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #fff; /* 标题的颜色 */
 }
+
+header h1 a {
+    color: inherit; /* 继承父元素的颜色 */
+    text-decoration: none; /* 移除下划线 */
+}
+
 header h1:hover {
     transform: scale(1.1);
-    color: #fffed3;
+    color: #fffed3; /* 悬停时的颜色 */
+    text-decoration: none; /* 可选：移除悬停时的下划线效果 */
 }
+
 nav {
     display: flex;
     justify-content: center;
@@ -245,11 +254,32 @@ footer a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
-    background-size: 200% 200%;
-    animation: gradientShift 10s ease infinite;
     color: #ffffff;
 }
 
+/* 添加动画样式 */
+.home-intro {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+@keyframes gradientShift {
+    0% { background-size: 100% 100%; } /* 初始大小 */
+    50% { background-size: 200% 200%; } /* 动画中间大小 */
+    100% { background-size: 100% 100%; } /* 结束时大小 */
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .home-intro {
+        background-size: cover; /* 在小屏幕下使用 cover */
+    }
+
+    @keyframes gradientShift {
+        0% { background-size: cover; } /* 初始大小 */
+        50% { background-size: cover; } /* 动画中间大小 */
+        100% { background-size: cover; } /* 结束时大小 */
+    }
+}
 .home-intro h2 {
     font-size: 2em;
     margin-bottom: 10px;
@@ -272,7 +302,7 @@ footer a {
     top: 20px; /* 距離頂部 */
     right: 20px; /* 距離右側 */
     max-width: 20vw; /* 根據螢幕寬度調整最大寬度 */
-    max-height: 25vh; /* 根據螢幕高度調整最大高度 */
+    max-height: 30vh; /* 根據螢幕高度調整最大高度 */
     overflow: hidden;
     border: 2px solid #ddd; /* 幻燈片容器邊框 */
     border-radius: 10px; /* 圓角效果 */
@@ -340,7 +370,7 @@ footer a {
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 1px 2px;
     font-size: 1em;
     text-align: center;
     cursor: pointer;
@@ -351,4 +381,57 @@ footer a {
 
 .floating-service-button:hover {
     background-color: #d64f6f;
+}
+
+.service-list {
+    /* 其他样式保持不变 */
+    position: relative; /* 确保浮动按钮定位的基准 */
+}
+
+/* 默认样式，适用于大屏幕（电脑） */
+.service-button {
+    position: relative; /* 绝对定位 */
+    background-color: #f07b9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000; /* 确保在其他元素上方 */
+}
+
+.service-button:hover {
+    background-color: #d64f6f;
+}
+
+/* 媒体查询，针对小屏幕（手机） */
+@media (max-width: 768px) {
+    .service-button {
+        /* 在手机上维持原本大小，无需特殊处理 */
+        padding: 10px 20px; /* 可以根据需要调整手机端的按钮大小 */
+        font-size: 1em; /* 可以根据需要调整手机端的字体大小 */
+    }
+}
+
+/* 在中心放置图片 */
+#services {
+    position: relative;
+}
+
+#services::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('img/6.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4; /* 可以调整图片透明度 */
 }
