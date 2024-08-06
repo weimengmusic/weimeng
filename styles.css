@@ -332,3 +332,23 @@ footer a {
     margin-bottom: 15px;
     line-height: 1.6;
 }
+.floating-service-button {
+    position: fixed;
+    bottom: 20px; /* 與底部的距離 */
+    left: 20px; /* 與左邊的距離 */
+    background-color: #f07b9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    z-index: 1000; /* 確保在其他元素上方 */
+}
+
+.floating-service-button:hover {
+    background-color: #d64f6f;
+}
