@@ -119,6 +119,6 @@ document.addEventListener('click', function(e) {
     setTimeout(() => {
         heart.style.transform = 'scale(0)';
         heart.style.opacity = '0';
-        setTimeout(() => heart.remove(), 300); // 確保動畫完成後再刪除
+        setTimeout(() => heart.remove(), 200); // 確保動畫完成後再刪除
     }, 1500);
 });
