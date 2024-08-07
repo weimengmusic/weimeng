@@ -104,8 +104,13 @@ document.addEventListener('click', function(e) {
 
     const heart = document.createElement('div');
     heart.className = 'heart';
-    heart.style.left = `${x - 15}px`;
-    heart.style.top = `${y - 15}px`;
+    
+    // 考慮文檔的滾動偏移
+    const scrollX = window.scrollX || window.pageXOffset;
+    const scrollY = window.scrollY || window.pageYOffset;
+
+    heart.style.left = `${x - 15 + scrollX}px`;
+    heart.style.top = `${y - 15 + scrollY}px`;
 
     document.body.appendChild(heart);
 
