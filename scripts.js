@@ -97,3 +97,28 @@ function toggleSidebar() {
         sidebar.style.left = '-200px';
     }
 }
+
+document.addEventListener('click', function(e) {
+    const x = e.clientX;
+    const y = e.clientY;
+
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = `${x - 15}px`;
+    heart.style.top = `${y - 15}px`;
+
+    document.body.appendChild(heart);
+
+    // 觸發動畫效果
+    requestAnimationFrame(() => {
+        heart.style.transform = 'scale(1)';
+        heart.style.opacity = '1';
+    });
+
+    // 刪除心形特效
+    setTimeout(() => {
+        heart.style.transform = 'scale(0)';
+        heart.style.opacity = '0';
+        setTimeout(() => heart.remove(), 300); // 確保動畫完成後再刪除
+    }, 1500);
+});

@@ -451,7 +451,7 @@ footer a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 1003;
     border-radius: 50%;
     font-size: 24px;
     border: 2px solid #000000; /* 添加外框 */
@@ -514,4 +514,18 @@ footer a {
     .sidebar {
         width: 150px; /* 在较小屏幕上调整宽度 */
     }
+}
+
+.heart {
+    position: absolute;
+    width: 30px; /* 根據圖片的實際大小調整 */
+    height: 30px; /* 根據圖片的實際大小調整 */
+    background-image: url('img/heart-58.png'); /* 替換為你的愛心圖片路徑 */
+    background-size: cover;
+    background-position: center;
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 1005;
 }
