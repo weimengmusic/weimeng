@@ -469,7 +469,7 @@ footer a {
     box-sizing: border-box;
     overflow-y: auto; /* 如果内容超出高度，启用垂直滚动条 */
     transition: left 0.3s ease; /* 添加过渡效果 */
-    z-index: 990;
+    z-index: 1002;
 }
 
 .social-icons {
